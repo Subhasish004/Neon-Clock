@@ -1,0 +1,70 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.gradient{
+    position: relative;
+    width:424px;
+    height: 424px;
+    background: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+.clock{
+    position: relative;
+    
+}
+
+.gradient::before , .gradient::after{
+    content: '';
+    position: absolute;
+    
+    background: linear-gradient(45deg, #fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+    background-size: 400%;
+    width:540px;
+    height:540px;
+    border-radius: 50%;
+    z-index: -1;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 400% 0;
+    }
+    0%{
+        background-position: 0 0;
+    }
+    
+}
+.gradient::after{
+    filter: blur(55px);
+}
+h1{
+    font-family: OCR A Std;
+    font-size: 24px;
+    color: aliceblue;
+}
+
+.glow {
+  
+  text-align: center;
+  animation: glow 0.4s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 4px #fff, 0 0 8px red, 0 0 12px red, 0 0 16px red, 0 0 20px red, 0 0 24px red;
+  }
+  
+  to {
+    text-shadow: 0 0 4px #fff, 0 0 8px red, 0 0 14px red, 0 0 20px red, 0 0 24px red, 0 0 28px red, 0 0 32px red;
+  }
+}
